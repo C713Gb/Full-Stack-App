@@ -39,6 +39,12 @@ app.use(
   })
 );
 
+app.get("/", (req,res) => {
+  res.json({
+    message: "Hello World"
+  });
+})
+
 app.get("/update-db", (req, res) => {
   try {
     let data = [];
