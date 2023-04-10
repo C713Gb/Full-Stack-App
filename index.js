@@ -10,25 +10,13 @@ import jwt from "jsonwebtoken";
 
 import cors from "cors";
 
+import db from "./db.js";
+
 const PORT = process.env.PORT || 3001;
 
 const app = express();
 
-var con = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "root",
-  database: "historical_prices",
-});
-
-con.connect((err) => {
-  if (err) {
-    console.log(err.stack);
-    return;
-  }
-
-  console.log("Connected");
-});
+const con = db;
 
 app.use(bodyParser.json());
 
