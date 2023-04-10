@@ -37,7 +37,7 @@ app.get("/update-db", (req, res) => {
   try {
     let data = [];
 
-    fs.createReadStream("./Server/prices.csv")
+    fs.createReadStream("./prices.csv")
       .pipe(parse({ delimiter: ",", from_line: 2 }))
       .on("data", (row) => {
         row.shift();

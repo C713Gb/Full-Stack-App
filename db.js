@@ -1,10 +1,10 @@
 import mysql from "mysql2";
 
 let db = mysql.createPool({
-  host: '127.0.0.1',
-  user: "root",
-  password: "root",
-  database: "historical_prices",
+  host: 'sql12.freemysqlhosting.net',
+  user: "sql12612120",
+  password: "gRqYWRxKfE",
+  database: "sql12612120",
   waitForConnections: true,
   connectionLimit: 10,
   queueLimit: 0,
